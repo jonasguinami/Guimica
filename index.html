@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de Química Interativo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particle-container"></div>
+
+    <div class="container-principal">
+        
+        <aside id="estante-de-elementos" class="painel">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Tabela Periódica</h2>
+            <div id="tabela-periodica-container">
+                </div>
+        </aside>
+
+        <main id="zona-de-reacao" class="painel">
+            <div class="mesa-header">
+                <div id="info-molecula">
+                    <h2 id="nome-molecula">Laboratório Químico</h2>
+                    <p id="formula-molecula">Arraste os elementos para começar</p>
+                </div>
+                <div class="botoes-controle">
+                    <button id="btn-explicacao" class="btn-icone" aria-label="Explicação">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                    </button>
+                    <button id="btn-limpar" class="btn-icone" aria-label="Limpar Mesa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m14.5 9.5-5 5m0-5 5 5"/></svg>
+                    </button>
+                    <button id="btn-salvar" aria-label="Salvar">Salvar</button>
+                    <button id="btn-carregar" aria-label="Carregar">Carregar</button>
+                </div>
+            </div>
+            <div id="mesa-container">
+                </div>
+        </main>
+
+        <aside id="caixa-info" class="painel">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="8.5" cy="8.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/><circle cx="8.5" cy="15.5" r="1"/><circle cx="15.5" cy="15.5" r="1"/></svg> Info. do Átomo</h2>
+            <div id="info-content">
+                <p>Selecione um elemento da tabela.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <div id="modal-explicacao" class="modal-oculto">
+        <div class="modal-conteudo">
+            <button id="modal-fechar" class="btn-icone">&times;</button>
+            <h2 id="modal-titulo">Informação do Composto</h2>
+            <p id="modal-descricao">Arraste elementos para a mesa para formar um composto e ver sua descrição aqui.</p>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
